@@ -1,0 +1,135 @@
+@import 'tailwindcss';
+
+/* ─── Theme tokens ──────────────────────────────────────────────────── */
+/* Dark mode (default) */
+:root {
+  --gf-bg:          #000000;
+  --gf-bg-raised:   #0A0A0A;
+  --gf-bg-surface:  #111111;
+  --gf-bg-card:     #111111;
+  --gf-border:      #1A1A1A;
+  --gf-border-mid:  #222222;
+  --gf-border-sub:  #141414;
+  --gf-text:        #ffffff;
+  --gf-text-muted:  #767676;
+  --gf-text-dim:    #444444;
+  --gf-text-faint:  #555555;
+  --gf-invert-bg:   #ffffff;
+  --gf-invert-text: #000000;
+  --gf-menu-bg:     #060606;
+  --gf-header-scroll-bg: #000000;
+  --gf-selection-bg:  #ffffff;
+  --gf-selection-text: #000000;
+}
+
+/* Light mode — activated by html.light */
+html.light {
+  --gf-bg:          #f5f5f5;
+  --gf-bg-raised:   #ffffff;
+  --gf-bg-surface:  #eeeeee;
+  --gf-bg-card:     #e8e8e8;
+  --gf-border:      #d4d4d4;
+  --gf-border-mid:  #cccccc;
+  --gf-border-sub:  #e0e0e0;
+  --gf-text:        #0a0a0a;
+  --gf-text-muted:  #555555;
+  --gf-text-dim:    #888888;
+  --gf-text-faint:  #777777;
+  --gf-invert-bg:   #0a0a0a;
+  --gf-invert-text: #ffffff;
+  --gf-menu-bg:     #fafafa;
+  --gf-header-scroll-bg: #f5f5f5;
+  --gf-selection-bg:  #0a0a0a;
+  --gf-selection-text: #ffffff;
+}
+
+/* Apply tokens to base elements */
+html {
+  background-color: var(--gf-bg);
+  color: var(--gf-text);
+}
+
+::selection {
+  background-color: var(--gf-selection-bg);
+  color: var(--gf-selection-text);
+}
+
+/* Theme-aware utility classes used by components */
+.gf-bg          { background-color: var(--gf-bg); }
+.gf-bg-raised   { background-color: var(--gf-bg-raised); }
+.gf-bg-surface  { background-color: var(--gf-bg-surface); }
+.gf-bg-card     { background-color: var(--gf-bg-card); }
+.gf-border      { border-color: var(--gf-border); }
+.gf-border-mid  { border-color: var(--gf-border-mid); }
+.gf-border-sub  { border-color: var(--gf-border-sub); }
+.gf-text        { color: var(--gf-text); }
+.gf-text-muted  { color: var(--gf-text-muted); }
+.gf-text-dim    { color: var(--gf-text-dim); }
+.gf-text-faint  { color: var(--gf-text-faint); }
+
+/* Hide Next.js dev/build indicators and error overlays. `devIndicators: false`
+ * in next.config.js disables the build-activity badge, but the dev-tools
+ * button and error toasts still render into <nextjs-portal> in dev. End
+ * users viewing the live sandbox should not see these. The element does not
+ * exist in production builds, so this rule is a harmless no-op there. */
+nextjs-portal {
+  display: none !important;
+}
+
+/* Uiverse neumorphic style — auth page buttons only */
+.auth-neu-btn:active {
+  color: #666 !important;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff !important;
+}
+
+/* Uiverse boryanakrasteva custom checkbox — auth page */
+@keyframes auth-checkmark-rotate {
+  0%   { transform: rotate(-45deg) scale(0); opacity: 0; }
+  60%  { transform: rotate(10deg)  scale(1.15); opacity: 1; }
+  80%  { transform: rotate(-5deg)  scale(0.95); }
+  100% { transform: rotate(0deg)   scale(1);    opacity: 1; }
+}
+
+.auth-custom-checkbox {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.auth-custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.auth-custom-checkbox .auth-cb-box {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.7);
+  border-radius: 4px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  pointer-events: none;
+}
+
+.auth-custom-checkbox input[type="checkbox"]:checked ~ .auth-cb-box {
+  border-color: #4ade80;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.55);
+}
+
+.auth-custom-checkbox .auth-cb-check {
+  display: none;
+}
+
+.auth-custom-checkbox input[type="checkbox"]:checked ~ .auth-cb-box .auth-cb-check {
+  display: block;
+  animation: auth-checkmark-rotate 0.35s ease forwards;
+}

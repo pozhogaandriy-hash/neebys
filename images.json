@@ -1,0 +1,92 @@
+[
+  {
+    "slug": "iter2-brand-logo",
+    "prompt": "Wordmark logo for 'GYMFRIENDS', aggressive geometric sans-serif typography, uppercase, wide letter spacing. text = #FFFFFF. Background is solid #0D0D0D. Crisp edges, clear boundaries, uniform solid fills. No textures, no shadows, no gradients.",
+    "aspect_ratio": "21:9",
+    "is_logo": true
+  },
+  {
+    "slug": "iter2-hero",
+    "prompt": "Subject: Unisex model wearing a dark technical t-shirt in an aggressive athletic stance. Background: Void-like black studio environment with dark asphalt floor. Role: background. Style: realistic photography. Camera: Low-angle wide straight-on hero shot. Composition: Centered with massive negative space for overlaid UI. Treatment: full-bleed. Lighting: High-key directional spotlight carving out muscle definition and fabric texture, desaturated moody color grade. Keywords: dark, aggressive, premium, dramatic. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "16:9",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-product-1",
+    "prompt": "Subject: Premium dark grey technical gym t-shirt displayed on a ghost mannequin. Background: Solid dark charcoal hex #111111. Role: product. Style: realistic photography. Camera: Eye-level straight-on medium shot. Composition: Centered, contained with breathing room. Treatment: contained. Lighting: Harsh spotlight highlighting fabric weave and technical seams, matte finish. Keywords: minimalist, sleek, athletic, moody. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "3:4",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-product-2",
+    "prompt": "Subject: Premium black athletic t-shirt with subtle mesh panels displayed on a ghost mannequin. Background: Solid dark charcoal hex #111111. Role: product. Style: realistic photography. Camera: Eye-level straight-on medium shot. Composition: Centered, contained with breathing room. Treatment: contained. Lighting: Harsh spotlight highlighting fabric weave, matte finish. Keywords: minimalist, sleek, athletic, moody. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "3:4",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-product-3",
+    "prompt": "Subject: Premium dark olive technical gym t-shirt displayed on a ghost mannequin. Background: Solid dark charcoal hex #111111. Role: product. Style: realistic photography. Camera: Eye-level straight-on medium shot. Composition: Centered, contained with breathing room. Treatment: contained. Lighting: Harsh spotlight highlighting fabric weave and technical seams, matte finish. Keywords: minimalist, sleek, athletic, moody. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "3:4",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-product-4",
+    "prompt": "Subject: Premium charcoal grey sleeveless gym tank top displayed on a ghost mannequin. Background: Solid dark charcoal hex #111111. Role: product. Style: realistic photography. Camera: Eye-level straight-on medium shot. Composition: Centered, contained with breathing room. Treatment: contained. Lighting: Harsh spotlight highlighting fabric weave, matte finish. Keywords: minimalist, sleek, athletic, moody. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "3:4",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-mosaic-main",
+    "prompt": "Subject: Unisex model in motion, sprinting while wearing black gym apparel. Background: Brutalist concrete architecture at night. Role: supporting. Style: realistic photography. Camera: Eye-level 3/4 tracking shot. Composition: Asymmetric, subject anchored to the right. Treatment: full-bleed. Lighting: Rim-lit silhouette, high contrast, desaturated. Keywords: gritty, urban, intense, dramatic. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "3:4",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-mosaic-sub1",
+    "prompt": "Subject: Close-up macro view of high-density technical stitching on a black athletic t-shirt. Background: Solid dark grey hex #1A1A1A. Role: supporting. Style: realistic photography. Camera: Extreme close-up. Composition: Abstract diagonal flow. Treatment: full-bleed. Lighting: Sharp directional light emphasizing texture. Keywords: technical, sculptural, premium, cool. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "16:9",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-mosaic-sub2",
+    "prompt": "Subject: Hands adjusting the hem of a dark technical gym shirt. Background: Dark industrial concrete wall. Role: supporting. Style: realistic photography. Camera: Close-up. Composition: Centered. Treatment: full-bleed. Lighting: Moody, high-contrast shadows. Keywords: tactile, focused, athletic, muted. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "16:9",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-marquee-1",
+    "prompt": "Subject: Athlete jumping, frozen in mid-air, wearing dark sportswear. Background: Solid black hex #000000. Role: supporting. Style: realistic photography. Camera: Low-angle wide shot. Composition: Centered, high tension. Treatment: contained. Lighting: Flash photography style, harsh shadows. Keywords: explosive, dynamic, stark, dramatic. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "1:1",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-marquee-2",
+    "prompt": "Subject: Stack of neatly folded black and charcoal gym t-shirts. Background: Solid dark grey hex #111111. Role: product. Style: realistic photography. Camera: Top-down flatlay. Composition: Centered. Treatment: contained. Lighting: Soft but directional, highlighting fabric folds. Keywords: organized, premium, retail, cool. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "1:1",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-bestseller-main",
+    "prompt": "Subject: Female model looking intensely at the camera, wearing a dark grey athletic top. Background: Void-like black studio. Role: portrait. Style: realistic photography. Camera: Eye-level close-up. Composition: Centered, strong eye contact. Treatment: full-bleed. Lighting: High-key shadows, desaturated color grade. Keywords: intense, fashion-sport, premium, dramatic. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "3:4",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-bestseller-overlap",
+    "prompt": "Subject: Abstract folded dark athletic fabric showing breathable mesh texture. Background: Solid black hex #000000. Role: supporting. Style: realistic photography. Camera: Extreme close-up. Composition: Edge-to-edge texture. Treatment: full-bleed. Lighting: Harsh spotlight. Keywords: technical, sleek, modern, cool. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "3:4",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-shipping-bg",
+    "prompt": "Subject: Premium matte black cardboard shipping box with subtle gloss tape, sitting on dark asphalt. Background: Dark asphalt environment. Role: background. Style: realistic photography. Camera: Eye-level 3/4 close-up. Composition: Anchored bottom right, massive negative space top left. Treatment: full-bleed. Lighting: Moody, cinematic rim lighting. Keywords: logistics, premium, stark, muted. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "16:9",
+    "is_logo": false
+  },
+  {
+    "slug": "iter2-contact-bg",
+    "prompt": "Subject: Heavy iron gym plates stacked against a brutalist concrete wall. Background: Dark concrete environment. Role: background. Style: realistic photography. Camera: Straight-on medium shot. Composition: Asymmetric, anchored left, negative space right. Treatment: full-bleed. Lighting: High contrast, deep shadows. Keywords: heavy, industrial, raw, dramatic. Image fills the entire frame edge-to-edge with no borders, frames, or rounded corners. Do not include any text, words, letters, numbers, or watermarks in the image.",
+    "aspect_ratio": "21:9",
+    "is_logo": false
+  }
+]
