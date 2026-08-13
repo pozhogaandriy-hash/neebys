@@ -1,4 +1,5 @@
 'use client';
+// This is an admin-only page, not part of the public site
 
 import Image from 'next/image';
 import Link from 'next/link';
