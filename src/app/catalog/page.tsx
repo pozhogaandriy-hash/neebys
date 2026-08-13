@@ -2,31 +2,80 @@ import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { CatalogView } from '@/components/CatalogView';
 import { PageShell } from '@/components/PageShell';
+import { createClient } from '@/lib/supabase/server';
 
 export const metadata = {
   title: 'Каталог',
-  description: 'Каталог преміального спортивного одягу Gymfriends — футболки, худі, шорти, аксесуари та більше.',
+  description:
+    'Каталог преміального спортивного одягу Gymfriends — футболки, худі, шорти, аксесуари та більше.',
   alternates: { canonical: '/catalog' },
   openGraph: {
     url: '/catalog',
     title: 'Каталог | Gymfriends',
-    description: 'Каталог преміального спортивного одягу Gymfriends — футболки, худі, шорти, аксесуари та більше.',
-    images: ['https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/0780422a-f84c-42a0-a322-29fdbc3daccb/iter2/iter2-product-1.png'],
+    description:
+      'Каталог преміального спортивного одягу Gymfriends — футболки, худі, шорти, аксесуари та більше.',
   },
 };
 
 interface CatalogPageProps {
-  searchParams: Promise<{ category?: string; collection?: string }>;
+  searchParams: Promise<{
+    category?: string;
+    collection?: string;
+  }>;
 }
 
-export default async function CatalogPage({ searchParams }: CatalogPageProps) {
+export default async function CatalogPage({
+  searchParams,
+}: CatalogPageProps) {
   const { category, collection } = await searchParams;
+
+  const supabase = await createClient();
+
+  const { data: products, error } = await supabase
+    .from('products')
+    .select(`
+      id,
+      name,
+      description,
+      sku,
+      price,
+      sale_price,
+      category,
+      image,
+      images,
+      stock,
+      sales,
+      status,
+      featured,
+      sizes,
+      colors,
+      created_at,
+      updated_at
+    `)
+    .eq('status', 'published')
+    .order('created_at', { ascending: false });
+
+  if (error) {
+    console.error('Catalog products error:', error);
+  }
 
   return (
     <PageShell>
-      <main className="min-h-screen" style={{ backgroundColor: "var(--gf-bg)", color: "var(--gf-text)" }}>
+      <main
+        className="min-h-screen"
+        style={{
+          backgroundColor: 'var(--gf-bg)',
+          color: 'var(--gf-text)',
+        }}
+      >
         <Header />
-        <CatalogView category={category} collection={collection} />
+
+        <CatalogView
+          products={products || []}
+          category={category}
+          collection={collection}
+        />
+
         <Footer />
       </main>
     </PageShell>

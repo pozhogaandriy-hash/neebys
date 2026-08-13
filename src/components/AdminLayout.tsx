@@ -34,6 +34,32 @@ const NAV_GROUPS = [
     ],
   },
   {
+  label: 'Orders',
+  href: '/admin/orders',
+  icon: (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+    >
+      <rect
+        x="3"
+        y="4"
+        width="18"
+        height="16"
+        rx="2"
+      />
+      <path d="M3 9h18" />
+      <path d="M8 4v5" />
+      <path d="M16 4v5" />
+    </svg>
+  ),
+  permission: 'manage_orders',
+},
+  {
     label: 'Security',
     items: [
       { label: 'Audit Logs', href: '/admin/audit-logs', icon: <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> },
@@ -93,25 +119,37 @@ export function AdminLayout({ children, title, breadcrumb }: AdminLayoutProps) {
           {NAV_GROUPS.map((group) => (
             <div key={group.label} className="mb-5">
               <p className={`${headingFont.className} text-[9px] uppercase tracking-[0.15em] text-[#2A2A2A] px-3 mb-1.5`}>{group.label}</p>
-              {group.items.map((item) => {
-                const active = isActive(item.href);
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setSidebarOpen(false)}
-                    className={`flex items-center gap-2.5 px-3 py-2 text-[13px] rounded-sm transition-colors mb-0.5 ${active ? 'bg-[#141414] text-white' : 'text-[#555555] hover:text-white hover:bg-[#0E0E0E]'}`}
-                  >
-                    <span className={active ? 'text-white' : 'text-[#333333]'}>{item.icon}</span>
-                    <span className={bodyFont.className}>{item.label}</span>
-                    {'badge' in item && (item.badge as number) > 0 && (
-                      <span className="ml-auto bg-red-600 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center">
-                        {item.badge as number}
-                      </span>
-                    )}
-                  </Link>
-                );
-              })}
+              {group.items ? (
+                group.items.map((item) => {
+                  const active = isActive(item.href);
+                  return (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setSidebarOpen(false)}
+                      className={`flex items-center gap-2.5 px-3 py-2 text-[13px] rounded-sm transition-colors mb-0.5 ${active ? 'bg-[#141414] text-white' : 'text-[#555555] hover:text-white hover:bg-[#0E0E0E]'}`}
+                    >
+                      <span className={active ? 'text-white' : 'text-[#333333]'}>{item.icon}</span>
+                      <span className={bodyFont.className}>{item.label}</span>
+                      {'badge' in item && (item.badge as number) > 0 && (
+                        <span className="ml-auto bg-red-600 text-white text-[9px] w-4 h-4 rounded-full flex items-center justify-center">
+                          {item.badge as number}
+                        </span>
+                      )}
+                    </Link>
+                  );
+                })
+              ) : group.href ? (
+                <Link
+                  key={group.href}
+                  href={group.href}
+                  onClick={() => setSidebarOpen(false)}
+                  className={`flex items-center gap-2.5 px-3 py-2 text-[13px] rounded-sm transition-colors mb-0.5 ${isActive(group.href) ? 'bg-[#141414] text-white' : 'text-[#555555] hover:text-white hover:bg-[#0E0E0E]'}`}
+                >
+                  <span className={isActive(group.href) ? 'text-white' : 'text-[#333333]'}>{group.icon}</span>
+                  <span className={bodyFont.className}>{group.label}</span>
+                </Link>
+              ) : null}
             </div>
           ))}
         </nav>

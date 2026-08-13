@@ -30,10 +30,10 @@ export interface Collection {
 }
 
 export const collections: Collection[] = [
-  { slug: 'new-arrivals', name: 'New Arrivals', description: 'Останні надходження сезону' },
-  { slug: 'essentials', name: 'Essentials', description: 'Базовий гардероб атлета' },
+  { slug: 'new-arrivals', name: 'New Arrivals', description: 'Нові колекції щосезону' },
+  { slug: 'essentials', name: 'Essentials', description: 'Базовий гардероб ' },
   { slug: 'performance', name: 'Performance', description: 'Максимальна продуктивність' },
-  { slug: 'streetwear', name: 'Streetwear', description: 'Спорт зустрічає вулицю' },
+  { slug: 'streetwear', name: 'Streetwear', description: 'одяг для любителів вуличного стилю' },
   { slug: 'limited-edition', name: 'Limited Edition', description: 'Ексклюзивні дропи' },
 ];
 

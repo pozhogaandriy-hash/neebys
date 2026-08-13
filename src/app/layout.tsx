@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import AnalyticsTracker from '@/components/AnalyticsTracker';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Gymfriends',
-    template: '%s | Gymfriends',
+    default: 'Neebys',
+    template: '%s | Neebys',
   },
   description:
-    'Преміальний спортивний одяг для тих, хто не шукає компромісів. Агресивний стиль. Технологічні матеріали.',
-  metadataBase: new URL('https://gymfriends.com.ua'),
+    'Neebys is a online clothes store',
+  metadataBase: new URL('https://neebys.com'),
 };
 
 export default function RootLayout({
@@ -29,7 +30,11 @@ export default function RootLayout({
             />
           )}
       </head>
-      <body>{children}</body>
+     <body>
+  <AnalyticsTracker />
+
+  {children}
+</body>
     </html>
   );
 }

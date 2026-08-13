@@ -1,9 +1,10 @@
-'use client';
-
+import { redirect } from 'next/navigation'
+import { createClient } from '@/lib/supabase/server'
 import { AdminLayout } from '@/components/AdminLayout';
 import { DASHBOARD_STATS, ADMIN_NOTIFICATIONS } from '@/data/auth';
 import { headingFont, bodyFont } from '@/app/fonts';
 import Link from 'next/link';
+import { requireAdmin } from '@/lib/auth/require-admin';
 
 const ROLE_COLORS: Record<string, string> = {
   super_admin: 'text-red-400',
@@ -13,6 +14,7 @@ const ROLE_COLORS: Record<string, string> = {
   premium_user: 'text-purple-400',
   regular_user: 'text-[#767676]',
 };
+
 
 function StatCard({ label, value, sub, color = 'text-white', href }: { label: string; value: string | number; sub?: string; color?: string; href?: string }) {
   const inner = (
@@ -43,9 +45,27 @@ function MiniBarChart({ data }: { data: { label: string; sessions: number }[] })
   );
 }
 
-export default function AdminDashboard() {
+export default async function AdminDashboard() {
+  const user = await requireAdmin();
   const stats = DASHBOARD_STATS;
   const unread = ADMIN_NOTIFICATIONS.filter((n) => !n.read);
+  const supabase = await createClient();
+
+  const {
+    data: { user: authUser },
+  } = await supabase.auth.getUser();
+
+  if (!authUser) {
+    redirect('/auth/sign-in');
+  }
+
+  const role = authUser.app_metadata?.role;
+
+  if (role !== 'admin' && role !== 'super_admin') {
+    redirect('/account/profile');
+  }
+
+  
 
   return (
     <AdminLayout title="Dashboard" breadcrumb={[{ label: 'Admin' }, { label: 'Dashboard' }]}>

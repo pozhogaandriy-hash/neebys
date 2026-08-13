@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
 
-const STORAGE_KEY = 'gymfriends_cart';
+const STORAGE_KEY = 'neebys_cart';
 
 export interface CartItem {
   id: string;        // product id

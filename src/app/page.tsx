@@ -8,13 +8,13 @@ import { Header } from '@/components/Header';
 import { PageShell } from '@/components/PageShell';
 
 export const metadata = {
-  title: 'Gymfriends — Преміальний спортивний одяг',
-  description: 'Преміальний спортивний одяг для тих, хто не шукає компромісів. Агресивний стиль. Технологічні матеріали. Нові колекції щосезону.',
+  title: 'Neebys shop',
+  description: 'Premium sportswear for those who don\'t look for compromises. Technological materials. New collections every season.',
   alternates: { canonical: '/' },
   openGraph: {
     url: '/',
-    title: 'Gymfriends — Преміальний спортивний одяг',
-    description: 'Преміальний спортивний одяг для тих, хто не шукає компромісів. Агресивний стиль. Технологічні матеріали.',
+    title: 'Neebys shop',
+    description: 'Premium sportswear for those who don\'t look for compromises. Technological materials. New collections every season.',
     images: ['https://static.kite.ai/image/upload/f_auto,q_auto,w_1200/app/0780422a-f84c-42a0-a322-29fdbc3daccb/iter2/iter2-hero-1.png'],
   },
 };

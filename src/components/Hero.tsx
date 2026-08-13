@@ -23,7 +23,7 @@ export default function Hero() {
       >
         <Image 
           src="https://static.kite.ai/image/upload/f_auto,q_auto,w_1600/app/0780422a-f84c-42a0-a322-29fdbc3daccb/iter2/iter2-hero-main.png"
-          alt="Gymfriends Hero"
+          alt="Neebys Hero"
           fill
           priority
           sizes="100vw"
